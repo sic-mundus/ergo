@@ -26,10 +26,37 @@ const funcs = {
         "Checking if your query makes sense..."
       );
 
-      if (word)
-        resolve();
-      else {
-        reject();
+      if (word) {
+        this.$oneLook
+          .get("/words", {
+            params: {
+              v: "ol_gte3",
+              ml: word,
+              qe: "ml",
+              md: "dp",
+              max: 1,
+              k: "olthes_r4"
+            }
+          })
+          .then(r => {
+
+            if (r.data.length) {
+              let item = r.data[0]
+              if (item.word.toLowerCase() === word.toLowerCase() && item.defs) {
+                resolve(item.defs)
+              } else {
+                reject('Word not found!')
+              }
+            } else {
+              reject('Not a word!')
+            }
+
+          })
+          .catch(r => {
+            reject(r)
+          });
+      } else {
+        reject('The word is empty!');
       }
     });
   },

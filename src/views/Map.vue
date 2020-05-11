@@ -63,6 +63,20 @@
         </v-card-text>
       </v-card>
     </v-dialog>
+
+    <!--Snack-->
+    <v-snackbar
+      v-model="snackbar.show"
+      :color="'error'"
+    >
+      {{ snackbar.text }}
+      <v-btn
+        text
+        @click="snackbar.show = false"
+      >
+        Close
+      </v-btn>
+    </v-snackbar>
   </div>
 </template>
 
@@ -103,7 +117,12 @@ export default {
       connections: [],
 
       word: "",
-      loading: false
+      loading: false,
+
+      snackbar: {
+        show: false,
+        text: ""
+      }
     };
   },
   computed: {
@@ -140,6 +159,8 @@ export default {
       this.connections = [];
 
       this.$store.commit("data/resetProgress");
+
+      this.snackbar.show = false;
     },
     load(w) {
       // Cler current state
@@ -160,7 +181,8 @@ export default {
           this.fit();
         })
         .catch(err => {
-          console.warn(err); // TODO: Visual manage erros states
+          this.snackbar.show = true;
+          this.snackbar.text = err;
         })
         .finally(() => {
           this.loading = false;
