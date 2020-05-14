@@ -28,6 +28,11 @@ export default {
       code: 'RU',
       languageCode: 'ru',
       position: [33.4979426, 40.6080862]
+    }, {
+      name: 'CZech Republic',
+      code: 'CZ',
+      languageCode: 'cs',
+      position: [40, 12]
     }]
   },
 
