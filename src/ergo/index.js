@@ -94,7 +94,7 @@ const funcs = {
     });
   },
 
-  compute(word) {
+  _compute(word) {
     console.debug('computing')
     return new Promise((resolve) => {
       this.$store.commit("data/setProgressDescription", "Translating...");
@@ -133,6 +133,40 @@ const funcs = {
         // Resolve
         resolve(translations)
 
+      });
+    });
+  },
+
+  compute(word) {
+    console.debug('computing', word)
+    return new Promise((resolve) => {
+      this.$store.commit("data/setProgressDescription", "Translating...");
+
+      let translations = [];
+      let countries = this.$store.getters["countries/all"];
+
+      // I can't say that I know how this thing works, but it sure does...
+      let result = countries.reduce((accumulatorPromise, nextCountry) => {
+
+        return accumulatorPromise.then((d) => {
+
+          // Add to the pool of translated words
+          if (d) {
+            translations.push({
+              country: d.country,
+              translation: d.translation
+            });
+          }
+
+          // Keep iterating
+          return funcs.tr(word, nextCountry);
+        })
+
+      }, Promise.resolve());
+
+      // When all the promises have been fullfilled..
+      result.then(() => {
+        resolve(translations);
       });
     });
   },
