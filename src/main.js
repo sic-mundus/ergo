@@ -6,7 +6,10 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import "leaflet/dist/leaflet.css";
 import ergo from "./ergo";
+
+// API
 import apiOneLook from './plugins/api-one-look'
+import apiIbm from './plugins/api-ibm'
 
 Vue.config.productionTip = false;
 
@@ -17,9 +20,8 @@ require("./plugins/leaflet");
 Vue.prototype.$ergo = ergo;
 
 ergo.$store = store;
-ergo.$oneLook = apiOneLook
-
-
+ergo.$oneLook = apiOneLook;
+ergo.$ibm = apiIbm;
 
 new Vue({
   router,

@@ -1,4 +1,9 @@
 import _ from "lodash";
+import {
+  setCORS
+} from "google-translate-api-browser";
+// setting up cors-anywhere server address
+const translate = setCORS("http://cors-anywhere.herokuapp.com/");
 
 const funcs = {
   bounced: _.debounce(
@@ -88,31 +93,69 @@ const funcs = {
     });
   },
 
-  translate(word) {
-    return new Promise(resolve => {
+  compute(word) {
+    return new Promise((resolve, reject) => {
       this.$store.commit("data/setProgressDescription", "Translating...");
-      console.debug("transalting", word);
 
-      // API
-      setTimeout(() => {
-        let translations = [];
+      let translations = [];
+      let countries = this.$store.getters["countries/all"];
 
-        let countries = this.$store.getters["countries/all"];
+      // Parse countries
+      countries.forEach(country => {
 
-        countries.forEach(country => {
-          translations.push({
-            country: country,
-            translation: "gato",
-            position: {
-              lat: 44.41322 + Math.random(1) * 20,
-              lng: 10.219482 + Math.random(1) * 20
-            }
+        funcs.tr(word, country.languageCode)
+          .then(r => {
+
+            // Singola promessa risolta
+            translations.push({
+              country: country,
+              translation: r
+            })
+
+          })
+          .catch(err => {
+
+            // Errore singola promessa
+            console.log('errore singola')
+            reject(err)
           });
-        });
 
-        // Resolve
-        resolve(translations);
-      }, 5000);
+      });
+
+      resolve(translations);
+
+      // Aspetto che tutte le promesse siano risolte
+      // Promise.all(promises)
+      //   .then(() => {
+      //     console.log('#done')
+      //     resolve(translations)
+      //   });
+    });
+  },
+
+  tr(word, languageCode) {
+    return new Promise((resolve, reject) => {
+
+      this.$store.commit("data/setProgressIteration", languageCode);
+      console.debug('translating + [' + word + '] in ' + languageCode)
+
+      translate(word, {
+          from: 'en',
+          to: languageCode
+        })
+        .then(res => {
+
+          // Traduzione completata per questa lingua
+          console.debug(' => tradotto', res);
+          resolve(res.text);
+
+        })
+        .catch(err => {
+
+          // Errore singola traduzione
+          console.debug(' => errore', err);
+          reject(err)
+        });
     });
   },
 
@@ -140,7 +183,7 @@ const funcs = {
             // already added
           } else {
             connections.push({
-              latlngs: [mk1.position, mk2.position],
+              latlngs: [mk1.country.position, mk2.country.position],
               color: "#706fd3"
             });
 

@@ -30,6 +30,10 @@ export default {
       state.progress.desc = payload;
     },
 
+    setProgressIteration(state, payload) {
+      state.progress.iter = payload;
+    },
+
     resetProgress(state) {
       state.progress = {
         desc: "",

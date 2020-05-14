@@ -2,26 +2,17 @@ export default {
   namespaced: true,
 
   state: {
-    countries: [
-      {
+    countries: [{
         name: "Italy",
-        code: "it"
-      },
-      {
-        name: "UK",
-        code: "en"
+        code: "IT",
+        languageCode: "it",
+        position: [47.41322, -1.219482]
       },
       {
         name: "Spain",
-        code: "es"
-      },
-      {
-        name: "German",
-        code: "de"
-      },
-      {
-        name: "Russia",
-        code: "ru"
+        code: "ES",
+        languageCode: "es",
+        position: [48.41322, 1.219482]
       }
     ]
   },

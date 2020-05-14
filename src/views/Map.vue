@@ -27,7 +27,7 @@
         <l-marker
           v-for="(mk, idx) in translations"
           :key="idx"
-          :lat-lng="mk.position"
+          :lat-lng="mk.country.position"
         >
           <l-tooltip :options="{ permanent: true, interactive: true }">
             {{ mk.translation }}
@@ -44,8 +44,10 @@
       </l-map>
     </div>
 
+    <!--Dialog-->
     <v-dialog
       style="z-index:9999;"
+      hide-overlay
       v-model="dialog"
       max-width="290"
       persistent
@@ -59,7 +61,12 @@
             class="ma-4"
           ></v-progress-circular>
 
-          {{ progress.desc }}
+          <span>
+            {{ progress.desc }}
+          </span>
+          <span v-show="progress.iter">
+            {{ progress.iter }}
+          </span>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -171,7 +178,7 @@ export default {
         .debounce()
         .then(() => this.$ergo.checkWord(w))
         .then(() => this.$ergo.isKnown(w))
-        .then(k => (k ? this.$ergo.fetchDb(w) : this.$ergo.translate(w)))
+        .then(k => (k ? this.$ergo.fetchDb(w) : this.$ergo.compute(w)))
         .then(trs => this.$ergo.connect(trs))
         .then(r => {
           this.translations = r.translations;
@@ -190,9 +197,11 @@ export default {
     },
     fit() {
       console.log("fitting..");
-      let positions = this.translations.map(x => x.position);
+      let positions = this.translations.map(x => x.country.position);
+      console.debug("poisitions:", positions);
 
       const bounds = latLngBounds(positions);
+      console.debug("bounds:", bounds);
       this.bounds = bounds;
     }
   }
