@@ -17,21 +17,12 @@
 
         <!--Search bar-->
         <l-control position="topleft">
-          <word-finder
-            :is-loading="loading"
-            @value-changed="val => (word = val)"
-          ></word-finder>
+          <word-finder :is-loading="loading" @value-changed="val => (word = val)"></word-finder>
         </l-control>
 
         <!--Makers-->
-        <l-marker
-          v-for="(mk, idx) in translations"
-          :key="idx"
-          :lat-lng="mk.country.position"
-        >
-          <l-tooltip :options="{ permanent: true, interactive: true }">
-            {{ mk.translation }}
-          </l-tooltip>
+        <l-marker v-for="(mk, idx) in translations" :key="idx" :lat-lng="mk.country.position">
+          <l-tooltip :options="{ permanent: true, interactive: true }">{{ mk.translation }}</l-tooltip>
         </l-marker>
 
         <!--connections-->
@@ -45,44 +36,22 @@
     </div>
 
     <!--Dialog-->
-    <v-dialog
-      style="z-index:9999;"
-      hide-overlay
-      v-model="dialog"
-      max-width="290"
-      persistent
-    >
+    <v-dialog style="z-index:9999;" hide-overlay v-model="dialog" max-width="290" persistent>
       <v-card>
         <v-card-title class="headline">Thinking</v-card-title>
         <v-card-text class="d-flex flex-column align-center justify-center">
-          <v-progress-circular
-            indeterminate
-            color="primary"
-            class="ma-4"
-          ></v-progress-circular>
+          <v-progress-circular indeterminate color="primary" class="ma-4"></v-progress-circular>
 
-          <span>
-            {{ progress.desc }}
-          </span>
-          <span v-show="progress.iter">
-            {{ progress.iter }}
-          </span>
+          <span>{{ progress.desc }}</span>
+          <span v-show="progress.iter">{{ progress.iter }}</span>
         </v-card-text>
       </v-card>
     </v-dialog>
 
     <!--Snack-->
-    <v-snackbar
-      v-model="snackbar.show"
-      :color="'error'"
-    >
+    <v-snackbar v-model="snackbar.show" :color="'error'">
       {{ snackbar.text }}
-      <v-btn
-        text
-        @click="snackbar.show = false"
-      >
-        Close
-      </v-btn>
+      <v-btn text @click="snackbar.show = false">Close</v-btn>
     </v-snackbar>
   </div>
 </template>

@@ -11,9 +11,9 @@ const funcs = {
       return f();
     },
     500, {
-      leading: false,
-      trailing: true
-    }
+    leading: false,
+    trailing: true
+  }
   ),
 
   debounce() {
@@ -25,6 +25,7 @@ const funcs = {
   },
 
   checkWord(word) {
+
     return new Promise((resolve, reject) => {
       this.$store.commit(
         "data/setProgressDescription",
@@ -68,7 +69,7 @@ const funcs = {
 
   isKnown(word) {
     return new Promise(resolve => {
-      console.debug("checking", word);
+      console.debug("#checking", word);
       this.$store.commit(
         "data/setProgressDescription",
         "Checking if this has already been translated..."
@@ -94,68 +95,73 @@ const funcs = {
   },
 
   compute(word) {
-    return new Promise((resolve, reject) => {
+    console.debug('computing')
+    return new Promise((resolve) => {
       this.$store.commit("data/setProgressDescription", "Translating...");
 
       let translations = [];
       let countries = this.$store.getters["countries/all"];
 
+      let tasks = [];
+
       // Parse countries
       countries.forEach(country => {
 
-        funcs.tr(word, country.languageCode)
-          .then(r => {
-
-            // Singola promessa risolta
-            translations.push({
-              country: country,
-              translation: r
-            })
-
-          })
-          .catch(err => {
-
-            // Errore singola promessa
-            console.log('errore singola')
-            reject(err)
-          });
+        tasks.push(funcs.tr(word, country));
 
       });
 
-      resolve(translations);
+      // Execute promises one at a time
+      tasks.reduce((promiseChain, currentTask) => {
+        return promiseChain.then(chainResults =>
+          currentTask.then(currentResult =>
+            [...chainResults, currentResult]
+          )
+        );
+      }, Promise.resolve([])).then(arrayOfResults => {
+        // Do something with all results
+        console.log('ALL RESULTS:', arrayOfResults);
 
-      // Aspetto che tutte le promesse siano risolte
-      // Promise.all(promises)
-      //   .then(() => {
-      //     console.log('#done')
-      //     resolve(translations)
-      //   });
+        // Create translations array
+        arrayOfResults.forEach(data => {
+          translations.push({
+            country: data.country,
+            translation: data.translation
+          });
+        });
+
+        // Resolve
+        resolve(translations)
+
+      });
     });
   },
 
-  tr(word, languageCode) {
+  tr(word, country) {
     return new Promise((resolve, reject) => {
+      let languageCode = country.languageCode;
 
       this.$store.commit("data/setProgressIteration", languageCode);
       console.debug('translating + [' + word + '] in ' + languageCode)
 
       translate(word, {
-          from: 'en',
-          to: languageCode
-        })
-        .then(res => {
+        from: 'en',
+        to: languageCode
+      }).then(res => {
 
-          // Traduzione completata per questa lingua
-          console.debug(' => tradotto', res);
-          resolve(res.text);
-
-        })
-        .catch(err => {
-
-          // Errore singola traduzione
-          console.debug(' => errore', err);
-          reject(err)
+        // Traduzione completata per questa lingua
+        console.debug(' => tradotto', res);
+        resolve({
+          country: country,
+          translation: res.text
         });
+
+      }).catch(err => {
+
+        // Errore singola traduzione
+        console.debug(' => errore', err);
+        reject(err)
+      });
     });
   },
 
@@ -176,8 +182,8 @@ const funcs = {
           } else if (
             added.some(
               x =>
-              (x.from == mk1.country.code && x.to == mk2.country.code) ||
-              (x.from == mk2.country.code && x.to == mk1.country.code)
+                (x.from == mk1.country.code && x.to == mk2.country.code) ||
+                (x.from == mk2.country.code && x.to == mk1.country.code)
             )
           ) {
             // already added
