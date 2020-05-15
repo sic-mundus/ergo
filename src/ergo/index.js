@@ -180,8 +180,16 @@ const funcs = {
       this.$store.commit("data/setProgressIteration", languageCode);
       console.debug('translating + [' + word + '] in ' + languageCode)
 
+      // Fuffa
+      let a = 0;
+      if (a === 1) {
+        resolve({
+          country: country,
+          translation: word
+        });
+      }
       // Check if it is already cached
-      if (alreadyTranslated.some(x => x.country.languageCode == country.languageCode)) {
+      else if (alreadyTranslated.some(x => x.country.languageCode == country.languageCode)) {
 
         console.debug('found within cache!!');
         let entry = alreadyTranslated.find(x => x.country.languageCode == country.languageCode);

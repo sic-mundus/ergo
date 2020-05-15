@@ -456,817 +456,817 @@ export default {
         ],
         "enabled": true
       },
-      {
-        "idx": 43,
-        "countryCode": "CH",
-        "languageCode": "de",
-        "countryName": "Switzerland",
-        "position": [
-          46.818188,
-          8.227512
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 44,
-        "countryCode": "CI",
-        "languageCode": "fr",
-        "countryName": "Côte d'Ivoire",
-        "position": [
-          7.539989,
-          -5.54708
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 45,
-        "countryCode": "CK",
-        "languageCode": "en",
-        "countryName": "Cook Islands",
-        "position": [
-          -21.236736,
-          -159.777671
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 46,
-        "countryCode": "CL",
-        "languageCode": "es",
-        "countryName": "Chile",
-        "position": [
-          -35.675147,
-          -71.542969
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 47,
-        "countryCode": "CM",
-        "languageCode": "fr",
-        "countryName": "Cameroon",
-        "position": [
-          7.369722,
-          12.354722
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 48,
-        "countryCode": "CN",
-        "languageCode": "zh-hans",
-        "countryName": "China",
-        "position": [
-          35.86166,
-          104.195397
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 49,
-        "countryCode": "CO",
-        "languageCode": "es",
-        "countryName": "Colombia",
-        "position": [
-          4.570868,
-          -74.297333
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 50,
-        "countryCode": "CR",
-        "languageCode": "es",
-        "countryName": "Costa Rica",
-        "position": [
-          9.748917,
-          -83.753428
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 51,
-        "countryCode": "CU",
-        "languageCode": "es",
-        "countryName": "Cuba",
-        "position": [
-          21.521757,
-          -77.781167
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 52,
-        "countryCode": "CV",
-        "languageCode": "pt",
-        "countryName": "Cabo Verde",
-        "position": [
-          16.002082,
-          -24.013197
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 53,
-        "countryCode": "CW",
-        "languageCode": "nl",
-        "countryName": "Curaçao",
-        "position": [],
-        "enabled": true
-      },
-      {
-        "idx": 54,
-        "countryCode": "CX",
-        "languageCode": "en",
-        "countryName": "Christmas Island",
-        "position": [
-          -10.447525,
-          105.690449
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 55,
-        "countryCode": "CY",
-        "languageCode": "el",
-        "countryName": "Cyprus",
-        "position": [
-          35.126413,
-          33.429859
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 56,
-        "countryCode": "CZ",
-        "languageCode": "cs",
-        "countryName": "Czech Republic",
-        "position": [
-          49.817492,
-          15.472962
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 57,
-        "countryCode": "DE",
-        "languageCode": "de",
-        "countryName": "Germany",
-        "position": [
-          51.165691,
-          10.451526
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 58,
-        "countryCode": "DJ",
-        "languageCode": "fr",
-        "countryName": "Djibouti",
-        "position": [
-          11.825138,
-          42.590275
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 59,
-        "countryCode": "DK",
-        "languageCode": "da",
-        "countryName": "Denmark",
-        "position": [
-          56.26392,
-          9.501785
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 60,
-        "countryCode": "DM",
-        "languageCode": "en",
-        "countryName": "Dominica",
-        "position": [
-          15.414999,
-          -61.370976
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 61,
-        "countryCode": "DO",
-        "languageCode": "es",
-        "countryName": "Dominican Republic",
-        "position": [
-          18.735693,
-          -70.162651
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 62,
-        "countryCode": "DZ",
-        "languageCode": "ar",
-        "countryName": "Algeria",
-        "position": [
-          28.033886,
-          1.659626
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 63,
-        "countryCode": "EC",
-        "languageCode": "es",
-        "countryName": "Ecuador",
-        "position": [
-          -1.831239,
-          -78.183406
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 64,
-        "countryCode": "EE",
-        "languageCode": "et",
-        "countryName": "Estonia",
-        "position": [
-          58.595272,
-          25.013607
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 65,
-        "countryCode": "EG",
-        "languageCode": "ar",
-        "countryName": "Egypt",
-        "position": [
-          26.820553,
-          30.802498
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 66,
-        "countryCode": "EH",
-        "languageCode": "ar",
-        "countryName": "Western Sahara",
-        "position": [
-          24.215527,
-          -12.885834
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 67,
-        "countryCode": "ER",
-        "languageCode": "ti",
-        "countryName": "Eritrea",
-        "position": [
-          15.179384,
-          39.782334
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 68,
-        "countryCode": "ES",
-        "languageCode": "ast",
-        "countryName": "Spain",
-        "position": [
-          40.463667,
-          -3.74922
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 69,
-        "countryCode": "ET",
-        "languageCode": "am",
-        "countryName": "Ethiopia",
-        "position": [
-          9.145,
-          40.489673
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 70,
-        "countryCode": "FI",
-        "languageCode": "fi",
-        "countryName": "Finland",
-        "position": [
-          61.92411,
-          25.748151
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 71,
-        "countryCode": "FJ",
-        "languageCode": "en",
-        "countryName": "Fiji",
-        "position": [
-          -16.578193,
-          179.414413
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 72,
-        "countryCode": "FK",
-        "languageCode": "en",
-        "countryName": "Falkland Islands",
-        "position": [
-          -51.796253,
-          -59.523613
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 73,
-        "countryCode": "FM",
-        "languageCode": "en",
-        "countryName": "Micronesia (Federated States of)",
-        "position": [
-          7.425554,
-          150.550812
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 74,
-        "countryCode": "FO",
-        "languageCode": "fo",
-        "countryName": "Faroe Islands",
-        "position": [
-          61.892635,
-          -6.911806
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 75,
-        "countryCode": "FR",
-        "languageCode": "fr",
-        "countryName": "France",
-        "position": [
-          46.227638,
-          2.213749
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 76,
-        "countryCode": "GA",
-        "languageCode": "fr",
-        "countryName": "Gabon",
-        "position": [
-          -0.803689,
-          11.609444
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 77,
-        "countryCode": "GB",
-        "languageCode": "en",
-        "countryName": "United Kingdom",
-        "position": [
-          55.378051,
-          -3.435973
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 78,
-        "countryCode": "GD",
-        "languageCode": "en",
-        "countryName": "Grenada",
-        "position": [
-          12.262776,
-          -61.604171
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 79,
-        "countryCode": "GE",
-        "languageCode": "ka",
-        "countryName": "Georgia",
-        "position": [
-          42.315407,
-          43.356892
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 80,
-        "countryCode": "GF",
-        "languageCode": "fr",
-        "countryName": "French Guiana",
-        "position": [
-          3.933889,
-          -53.125782
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 81,
-        "countryCode": "GG",
-        "languageCode": "en",
-        "countryName": "Guernsey",
-        "position": [
-          49.465691,
-          -2.585278
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 82,
-        "countryCode": "GH",
-        "languageCode": "en",
-        "countryName": "Ghana",
-        "position": [
-          7.946527,
-          -1.023194
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 83,
-        "countryCode": "GI",
-        "languageCode": "en",
-        "countryName": "Gibraltar",
-        "position": [
-          36.137741,
-          -5.345374
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 84,
-        "countryCode": "GL",
-        "languageCode": "kl",
-        "countryName": "Greenland",
-        "position": [
-          71.706936,
-          -42.604303
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 85,
-        "countryCode": "GM",
-        "languageCode": "en",
-        "countryName": "The Gambia",
-        "position": [
-          13.443182,
-          -15.310139
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 86,
-        "countryCode": "GN",
-        "languageCode": "fr",
-        "countryName": "Guinea",
-        "position": [
-          9.945587,
-          -9.696645
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 87,
-        "countryCode": "GP",
-        "languageCode": "fr",
-        "countryName": "Guadeloupe",
-        "position": [
-          16.995971,
-          -62.067641
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 88,
-        "countryCode": "GQ",
-        "languageCode": "es",
-        "countryName": "Equatorial Guinea",
-        "position": [
-          1.650801,
-          10.267895
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 89,
-        "countryCode": "GR",
-        "languageCode": "el",
-        "countryName": "Greece",
-        "position": [
-          39.074208,
-          21.824312
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 90,
-        "countryCode": "GS",
-        "languageCode": "en",
-        "countryName": "South Georgia and the South Sandwich Islands",
-        "position": [
-          -54.429579,
-          -36.587909
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 91,
-        "countryCode": "GT",
-        "languageCode": "es",
-        "countryName": "Guatemala",
-        "position": [
-          15.783471,
-          -90.230759
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 92,
-        "countryCode": "GU",
-        "languageCode": "en",
-        "countryName": "Guam",
-        "position": [
-          13.444304,
-          144.793731
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 93,
-        "countryCode": "GW",
-        "languageCode": "pt",
-        "countryName": "Guinea Bissau",
-        "position": [
-          11.803749,
-          -15.180413
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 94,
-        "countryCode": "GY",
-        "languageCode": "en",
-        "countryName": "Guyana",
-        "position": [
-          4.860416,
-          -58.93018
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 95,
-        "countryCode": "HK",
-        "languageCode": "zh-hant",
-        "countryName": "Hong Kong (SAR of China)",
-        "position": [
-          22.396428,
-          114.109497
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 96,
-        "countryCode": "HM",
-        "languageCode": "en",
-        "countryName": "Heard Island and McDonald Islands",
-        "position": [
-          -53.08181,
-          73.504158
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 97,
-        "countryCode": "HN",
-        "languageCode": "es",
-        "countryName": "Honduras",
-        "position": [
-          15.199999,
-          -86.241905
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 98,
-        "countryCode": "HR",
-        "languageCode": "hr",
-        "countryName": "Croatia",
-        "position": [
-          45.1,
-          15.2
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 99,
-        "countryCode": "HT",
-        "languageCode": "fr",
-        "countryName": "Haiti",
-        "position": [
-          18.971187,
-          -72.285215
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 100,
-        "countryCode": "HU",
-        "languageCode": "hu",
-        "countryName": "Hungary",
-        "position": [
-          47.162494,
-          19.503304
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 101,
-        "countryCode": "ID",
-        "languageCode": "id",
-        "countryName": "Indonesia",
-        "position": [
-          -0.789275,
-          113.921327
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 102,
-        "countryCode": "IE",
-        "languageCode": "en",
-        "countryName": "Ireland",
-        "position": [
-          53.41291,
-          -8.24389
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 103,
-        "countryCode": "IL",
-        "languageCode": "he",
-        "countryName": "Israel",
-        "position": [
-          31.046051,
-          34.851612
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 104,
-        "countryCode": "IM",
-        "languageCode": "en",
-        "countryName": "Isle of Man",
-        "position": [
-          54.236107,
-          -4.548056
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 105,
-        "countryCode": "IN",
-        "languageCode": "hi",
-        "countryName": "India",
-        "position": [
-          20.593684,
-          78.96288
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 106,
-        "countryCode": "IO",
-        "languageCode": "en",
-        "countryName": "British Indian Ocean Territory",
-        "position": [
-          -6.343194,
-          71.876519
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 107,
-        "countryCode": "IQ",
-        "languageCode": "ar",
-        "countryName": "Iraq",
-        "position": [
-          33.223191,
-          43.679291
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 108,
-        "countryCode": "IR",
-        "languageCode": "fa",
-        "countryName": "Iran",
-        "position": [
-          32.427908,
-          53.688046
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 109,
-        "countryCode": "IS",
-        "languageCode": "is",
-        "countryName": "Iceland",
-        "position": [
-          64.963051,
-          -19.020835
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 110,
-        "countryCode": "IT",
-        "languageCode": "it",
-        "countryName": "Italy",
-        "position": [
-          41.87194,
-          12.56738
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 111,
-        "countryCode": "JE",
-        "languageCode": "en",
-        "countryName": "Jersey",
-        "position": [
-          49.214439,
-          -2.13125
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 112,
-        "countryCode": "JM",
-        "languageCode": "en",
-        "countryName": "Jamaica",
-        "position": [
-          18.109581,
-          -77.297508
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 113,
-        "countryCode": "JO",
-        "languageCode": "ar",
-        "countryName": "Jordan",
-        "position": [
-          30.585164,
-          36.238414
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 114,
-        "countryCode": "JP",
-        "languageCode": "ja",
-        "countryName": "Japan",
-        "position": [
-          36.204824,
-          138.252924
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 115,
-        "countryCode": "KE",
-        "languageCode": "sw",
-        "countryName": "Kenya",
-        "position": [
-          -0.023559,
-          37.906193
-        ],
-        "enabled": true
-      },
-      {
-        "idx": 116,
-        "countryCode": "KG",
-        "languageCode": "ky",
-        "countryName": "Kyrgyzstan",
-        "position": [
-          41.20438,
-          74.766098
-        ],
-        "enabled": true
-      },
+      // {
+      //   "idx": 43,
+      //   "countryCode": "CH",
+      //   "languageCode": "de",
+      //   "countryName": "Switzerland",
+      //   "position": [
+      //     46.818188,
+      //     8.227512
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 44,
+      //   "countryCode": "CI",
+      //   "languageCode": "fr",
+      //   "countryName": "Côte d'Ivoire",
+      //   "position": [
+      //     7.539989,
+      //     -5.54708
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 45,
+      //   "countryCode": "CK",
+      //   "languageCode": "en",
+      //   "countryName": "Cook Islands",
+      //   "position": [
+      //     -21.236736,
+      //     -159.777671
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 46,
+      //   "countryCode": "CL",
+      //   "languageCode": "es",
+      //   "countryName": "Chile",
+      //   "position": [
+      //     -35.675147,
+      //     -71.542969
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 47,
+      //   "countryCode": "CM",
+      //   "languageCode": "fr",
+      //   "countryName": "Cameroon",
+      //   "position": [
+      //     7.369722,
+      //     12.354722
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 48,
+      //   "countryCode": "CN",
+      //   "languageCode": "zh-hans",
+      //   "countryName": "China",
+      //   "position": [
+      //     35.86166,
+      //     104.195397
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 49,
+      //   "countryCode": "CO",
+      //   "languageCode": "es",
+      //   "countryName": "Colombia",
+      //   "position": [
+      //     4.570868,
+      //     -74.297333
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 50,
+      //   "countryCode": "CR",
+      //   "languageCode": "es",
+      //   "countryName": "Costa Rica",
+      //   "position": [
+      //     9.748917,
+      //     -83.753428
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 51,
+      //   "countryCode": "CU",
+      //   "languageCode": "es",
+      //   "countryName": "Cuba",
+      //   "position": [
+      //     21.521757,
+      //     -77.781167
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 52,
+      //   "countryCode": "CV",
+      //   "languageCode": "pt",
+      //   "countryName": "Cabo Verde",
+      //   "position": [
+      //     16.002082,
+      //     -24.013197
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 53,
+      //   "countryCode": "CW",
+      //   "languageCode": "nl",
+      //   "countryName": "Curaçao",
+      //   "position": [],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 54,
+      //   "countryCode": "CX",
+      //   "languageCode": "en",
+      //   "countryName": "Christmas Island",
+      //   "position": [
+      //     -10.447525,
+      //     105.690449
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 55,
+      //   "countryCode": "CY",
+      //   "languageCode": "el",
+      //   "countryName": "Cyprus",
+      //   "position": [
+      //     35.126413,
+      //     33.429859
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 56,
+      //   "countryCode": "CZ",
+      //   "languageCode": "cs",
+      //   "countryName": "Czech Republic",
+      //   "position": [
+      //     49.817492,
+      //     15.472962
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 57,
+      //   "countryCode": "DE",
+      //   "languageCode": "de",
+      //   "countryName": "Germany",
+      //   "position": [
+      //     51.165691,
+      //     10.451526
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 58,
+      //   "countryCode": "DJ",
+      //   "languageCode": "fr",
+      //   "countryName": "Djibouti",
+      //   "position": [
+      //     11.825138,
+      //     42.590275
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 59,
+      //   "countryCode": "DK",
+      //   "languageCode": "da",
+      //   "countryName": "Denmark",
+      //   "position": [
+      //     56.26392,
+      //     9.501785
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 60,
+      //   "countryCode": "DM",
+      //   "languageCode": "en",
+      //   "countryName": "Dominica",
+      //   "position": [
+      //     15.414999,
+      //     -61.370976
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 61,
+      //   "countryCode": "DO",
+      //   "languageCode": "es",
+      //   "countryName": "Dominican Republic",
+      //   "position": [
+      //     18.735693,
+      //     -70.162651
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 62,
+      //   "countryCode": "DZ",
+      //   "languageCode": "ar",
+      //   "countryName": "Algeria",
+      //   "position": [
+      //     28.033886,
+      //     1.659626
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 63,
+      //   "countryCode": "EC",
+      //   "languageCode": "es",
+      //   "countryName": "Ecuador",
+      //   "position": [
+      //     -1.831239,
+      //     -78.183406
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 64,
+      //   "countryCode": "EE",
+      //   "languageCode": "et",
+      //   "countryName": "Estonia",
+      //   "position": [
+      //     58.595272,
+      //     25.013607
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 65,
+      //   "countryCode": "EG",
+      //   "languageCode": "ar",
+      //   "countryName": "Egypt",
+      //   "position": [
+      //     26.820553,
+      //     30.802498
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 66,
+      //   "countryCode": "EH",
+      //   "languageCode": "ar",
+      //   "countryName": "Western Sahara",
+      //   "position": [
+      //     24.215527,
+      //     -12.885834
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 67,
+      //   "countryCode": "ER",
+      //   "languageCode": "ti",
+      //   "countryName": "Eritrea",
+      //   "position": [
+      //     15.179384,
+      //     39.782334
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 68,
+      //   "countryCode": "ES",
+      //   "languageCode": "ast",
+      //   "countryName": "Spain",
+      //   "position": [
+      //     40.463667,
+      //     -3.74922
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 69,
+      //   "countryCode": "ET",
+      //   "languageCode": "am",
+      //   "countryName": "Ethiopia",
+      //   "position": [
+      //     9.145,
+      //     40.489673
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 70,
+      //   "countryCode": "FI",
+      //   "languageCode": "fi",
+      //   "countryName": "Finland",
+      //   "position": [
+      //     61.92411,
+      //     25.748151
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 71,
+      //   "countryCode": "FJ",
+      //   "languageCode": "en",
+      //   "countryName": "Fiji",
+      //   "position": [
+      //     -16.578193,
+      //     179.414413
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 72,
+      //   "countryCode": "FK",
+      //   "languageCode": "en",
+      //   "countryName": "Falkland Islands",
+      //   "position": [
+      //     -51.796253,
+      //     -59.523613
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 73,
+      //   "countryCode": "FM",
+      //   "languageCode": "en",
+      //   "countryName": "Micronesia (Federated States of)",
+      //   "position": [
+      //     7.425554,
+      //     150.550812
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 74,
+      //   "countryCode": "FO",
+      //   "languageCode": "fo",
+      //   "countryName": "Faroe Islands",
+      //   "position": [
+      //     61.892635,
+      //     -6.911806
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 75,
+      //   "countryCode": "FR",
+      //   "languageCode": "fr",
+      //   "countryName": "France",
+      //   "position": [
+      //     46.227638,
+      //     2.213749
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 76,
+      //   "countryCode": "GA",
+      //   "languageCode": "fr",
+      //   "countryName": "Gabon",
+      //   "position": [
+      //     -0.803689,
+      //     11.609444
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 77,
+      //   "countryCode": "GB",
+      //   "languageCode": "en",
+      //   "countryName": "United Kingdom",
+      //   "position": [
+      //     55.378051,
+      //     -3.435973
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 78,
+      //   "countryCode": "GD",
+      //   "languageCode": "en",
+      //   "countryName": "Grenada",
+      //   "position": [
+      //     12.262776,
+      //     -61.604171
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 79,
+      //   "countryCode": "GE",
+      //   "languageCode": "ka",
+      //   "countryName": "Georgia",
+      //   "position": [
+      //     42.315407,
+      //     43.356892
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 80,
+      //   "countryCode": "GF",
+      //   "languageCode": "fr",
+      //   "countryName": "French Guiana",
+      //   "position": [
+      //     3.933889,
+      //     -53.125782
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 81,
+      //   "countryCode": "GG",
+      //   "languageCode": "en",
+      //   "countryName": "Guernsey",
+      //   "position": [
+      //     49.465691,
+      //     -2.585278
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 82,
+      //   "countryCode": "GH",
+      //   "languageCode": "en",
+      //   "countryName": "Ghana",
+      //   "position": [
+      //     7.946527,
+      //     -1.023194
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 83,
+      //   "countryCode": "GI",
+      //   "languageCode": "en",
+      //   "countryName": "Gibraltar",
+      //   "position": [
+      //     36.137741,
+      //     -5.345374
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 84,
+      //   "countryCode": "GL",
+      //   "languageCode": "kl",
+      //   "countryName": "Greenland",
+      //   "position": [
+      //     71.706936,
+      //     -42.604303
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 85,
+      //   "countryCode": "GM",
+      //   "languageCode": "en",
+      //   "countryName": "The Gambia",
+      //   "position": [
+      //     13.443182,
+      //     -15.310139
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 86,
+      //   "countryCode": "GN",
+      //   "languageCode": "fr",
+      //   "countryName": "Guinea",
+      //   "position": [
+      //     9.945587,
+      //     -9.696645
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 87,
+      //   "countryCode": "GP",
+      //   "languageCode": "fr",
+      //   "countryName": "Guadeloupe",
+      //   "position": [
+      //     16.995971,
+      //     -62.067641
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 88,
+      //   "countryCode": "GQ",
+      //   "languageCode": "es",
+      //   "countryName": "Equatorial Guinea",
+      //   "position": [
+      //     1.650801,
+      //     10.267895
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 89,
+      //   "countryCode": "GR",
+      //   "languageCode": "el",
+      //   "countryName": "Greece",
+      //   "position": [
+      //     39.074208,
+      //     21.824312
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 90,
+      //   "countryCode": "GS",
+      //   "languageCode": "en",
+      //   "countryName": "South Georgia and the South Sandwich Islands",
+      //   "position": [
+      //     -54.429579,
+      //     -36.587909
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 91,
+      //   "countryCode": "GT",
+      //   "languageCode": "es",
+      //   "countryName": "Guatemala",
+      //   "position": [
+      //     15.783471,
+      //     -90.230759
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 92,
+      //   "countryCode": "GU",
+      //   "languageCode": "en",
+      //   "countryName": "Guam",
+      //   "position": [
+      //     13.444304,
+      //     144.793731
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 93,
+      //   "countryCode": "GW",
+      //   "languageCode": "pt",
+      //   "countryName": "Guinea Bissau",
+      //   "position": [
+      //     11.803749,
+      //     -15.180413
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 94,
+      //   "countryCode": "GY",
+      //   "languageCode": "en",
+      //   "countryName": "Guyana",
+      //   "position": [
+      //     4.860416,
+      //     -58.93018
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 95,
+      //   "countryCode": "HK",
+      //   "languageCode": "zh-hant",
+      //   "countryName": "Hong Kong (SAR of China)",
+      //   "position": [
+      //     22.396428,
+      //     114.109497
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 96,
+      //   "countryCode": "HM",
+      //   "languageCode": "en",
+      //   "countryName": "Heard Island and McDonald Islands",
+      //   "position": [
+      //     -53.08181,
+      //     73.504158
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 97,
+      //   "countryCode": "HN",
+      //   "languageCode": "es",
+      //   "countryName": "Honduras",
+      //   "position": [
+      //     15.199999,
+      //     -86.241905
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 98,
+      //   "countryCode": "HR",
+      //   "languageCode": "hr",
+      //   "countryName": "Croatia",
+      //   "position": [
+      //     45.1,
+      //     15.2
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 99,
+      //   "countryCode": "HT",
+      //   "languageCode": "fr",
+      //   "countryName": "Haiti",
+      //   "position": [
+      //     18.971187,
+      //     -72.285215
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 100,
+      //   "countryCode": "HU",
+      //   "languageCode": "hu",
+      //   "countryName": "Hungary",
+      //   "position": [
+      //     47.162494,
+      //     19.503304
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 101,
+      //   "countryCode": "ID",
+      //   "languageCode": "id",
+      //   "countryName": "Indonesia",
+      //   "position": [
+      //     -0.789275,
+      //     113.921327
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 102,
+      //   "countryCode": "IE",
+      //   "languageCode": "en",
+      //   "countryName": "Ireland",
+      //   "position": [
+      //     53.41291,
+      //     -8.24389
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 103,
+      //   "countryCode": "IL",
+      //   "languageCode": "he",
+      //   "countryName": "Israel",
+      //   "position": [
+      //     31.046051,
+      //     34.851612
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 104,
+      //   "countryCode": "IM",
+      //   "languageCode": "en",
+      //   "countryName": "Isle of Man",
+      //   "position": [
+      //     54.236107,
+      //     -4.548056
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 105,
+      //   "countryCode": "IN",
+      //   "languageCode": "hi",
+      //   "countryName": "India",
+      //   "position": [
+      //     20.593684,
+      //     78.96288
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 106,
+      //   "countryCode": "IO",
+      //   "languageCode": "en",
+      //   "countryName": "British Indian Ocean Territory",
+      //   "position": [
+      //     -6.343194,
+      //     71.876519
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 107,
+      //   "countryCode": "IQ",
+      //   "languageCode": "ar",
+      //   "countryName": "Iraq",
+      //   "position": [
+      //     33.223191,
+      //     43.679291
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 108,
+      //   "countryCode": "IR",
+      //   "languageCode": "fa",
+      //   "countryName": "Iran",
+      //   "position": [
+      //     32.427908,
+      //     53.688046
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 109,
+      //   "countryCode": "IS",
+      //   "languageCode": "is",
+      //   "countryName": "Iceland",
+      //   "position": [
+      //     64.963051,
+      //     -19.020835
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 110,
+      //   "countryCode": "IT",
+      //   "languageCode": "it",
+      //   "countryName": "Italy",
+      //   "position": [
+      //     41.87194,
+      //     12.56738
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 111,
+      //   "countryCode": "JE",
+      //   "languageCode": "en",
+      //   "countryName": "Jersey",
+      //   "position": [
+      //     49.214439,
+      //     -2.13125
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 112,
+      //   "countryCode": "JM",
+      //   "languageCode": "en",
+      //   "countryName": "Jamaica",
+      //   "position": [
+      //     18.109581,
+      //     -77.297508
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 113,
+      //   "countryCode": "JO",
+      //   "languageCode": "ar",
+      //   "countryName": "Jordan",
+      //   "position": [
+      //     30.585164,
+      //     36.238414
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 114,
+      //   "countryCode": "JP",
+      //   "languageCode": "ja",
+      //   "countryName": "Japan",
+      //   "position": [
+      //     36.204824,
+      //     138.252924
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 115,
+      //   "countryCode": "KE",
+      //   "languageCode": "sw",
+      //   "countryName": "Kenya",
+      //   "position": [
+      //     -0.023559,
+      //     37.906193
+      //   ],
+      //   "enabled": true
+      // },
+      // {
+      //   "idx": 116,
+      //   "countryCode": "KG",
+      //   "languageCode": "ky",
+      //   "countryName": "Kyrgyzstan",
+      //   "position": [
+      //     41.20438,
+      //     74.766098
+      //   ],
+      //   "enabled": true
+      // },
       // {
       //   "idx": 117,
       //   "countryCode": "KH",
@@ -2727,7 +2727,7 @@ export default {
     },
 
     enabled(state) {
-      return state.countries.filter(x => x.enabled);
+      return state.countries.filter(x => x.enabled && x.position.length == 2);
     }
   }
 };

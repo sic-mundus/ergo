@@ -22,7 +22,11 @@
 
         <!--Makers-->
         <l-marker v-for="(mk, idx) in translations" :key="idx" :lat-lng="mk.country.position">
-          <l-tooltip :options="{ permanent: true, interactive: true }">{{ mk.translation }}</l-tooltip>
+          <l-tooltip :options="{ permanent: true, interactive: true }">
+            {{ mk.country.countryName }}
+            <br />
+            {{ mk.translation }}
+          </l-tooltip>
         </l-marker>
 
         <!--connections-->
