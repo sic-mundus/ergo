@@ -151,8 +151,8 @@ const funcs = {
 
         return accumulatorPromise.then((d) => {
 
-          // If it yeld some results..
-          // add it to the pool of translated words
+          // Check if it actually yielded any results,
+          // cuz I don't trust it at all
           if (d) {
             translations.push({
               country: d.country,
@@ -166,10 +166,11 @@ const funcs = {
 
       }, Promise.resolve());
 
-      // When all the promises have been fullfilled..
+      // ..when all the promises have been fullfilled..
       result.then(() => {
         resolve(translations);
       });
+
     });
   },
 
