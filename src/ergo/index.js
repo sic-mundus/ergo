@@ -151,7 +151,8 @@ const funcs = {
 
         return accumulatorPromise.then((d) => {
 
-          // Add to the pool of translated words
+          // If it yeld some results..
+          // add it to the pool of translated words
           if (d) {
             translations.push({
               country: d.country,
@@ -160,7 +161,7 @@ const funcs = {
           }
 
           // Keep iterating
-          return funcs.tr(word, nextCountry);
+          return funcs.tr(word, nextCountry, translations);
         })
 
       }, Promise.resolve());
@@ -172,31 +173,46 @@ const funcs = {
     });
   },
 
-  tr(word, country) {
+  tr(word, country, alreadyTranslated) {
     return new Promise((resolve) => {
       let languageCode = country.languageCode;
 
       this.$store.commit("data/setProgressIteration", languageCode);
       console.debug('translating + [' + word + '] in ' + languageCode)
 
-      translate(word, {
-        from: 'en',
-        to: languageCode
-      }).then(res => {
+      // Check if it is already cached
+      if (alreadyTranslated.some(x => x.country.languageCode == country.languageCode)) {
 
-        // Traduzione completata per questa lingua
-        console.debug(' => tradotto', res);
+        console.debug('found within cache!!');
+        let entry = alreadyTranslated.find(x => x.country.languageCode == country.languageCode);
+
         resolve({
           country: country,
-          translation: res.text
+          translation: entry.translation
         });
 
-      }).catch(err => {
+      } else {
 
-        // Errore singola traduzione
-        console.debug(' => errore', err);
-        resolve()
-      });
+        translate(word, {
+          from: 'en',
+          to: languageCode
+        }).then(res => {
+
+          // Traduzione completata per questa lingua
+          console.debug(' => tradotto', res);
+          resolve({
+            country: country,
+            translation: res.text
+          });
+
+        }).catch(err => {
+
+          // Errore singola traduzione
+          console.debug(' => errore', err);
+          resolve()
+        });
+
+      }
     });
   },
 
@@ -224,7 +240,7 @@ const funcs = {
             let distance = levenshtein(mk1.translation, mk2.translation);
             console.log('The distance between ' + mk1.translation + ' and ' + mk2.translation + ' is', distance);
 
-            let maxStepsAllowed = 5;
+            let maxStepsAllowed = 3;
             if (distance <= maxStepsAllowed) {
 
               // Pretty close
@@ -233,6 +249,7 @@ const funcs = {
               console.log('percentage ' + perc + ' leads to ' + color);
 
               if (perc >= 0 && perc <= 100) {
+
                 connections.push({
                   latlngs: [mk1.country.position, mk2.country.position],
                   color: color,
