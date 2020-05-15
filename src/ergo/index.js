@@ -144,7 +144,7 @@ const funcs = {
       this.$store.commit("data/setProgressDescription", "Translating...");
 
       let translations = [];
-      let countries = this.$store.getters["countries/all"];
+      let countries = this.$store.getters["countries/enabled"];
 
       // I can't say that I know how this thing works, but it sure does...
       let result = countries.reduce((accumulatorPromise, nextCountry) => {
@@ -173,7 +173,7 @@ const funcs = {
   },
 
   tr(word, country) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       let languageCode = country.languageCode;
 
       this.$store.commit("data/setProgressIteration", languageCode);
@@ -195,7 +195,7 @@ const funcs = {
 
         // Errore singola traduzione
         console.debug(' => errore', err);
-        reject(err)
+        resolve()
       });
     });
   },
@@ -208,39 +208,43 @@ const funcs = {
       );
 
       let connections = [];
-      let added = [];
+      let processedPairs = [];
 
       translations.forEach(mk1 => {
         translations.forEach(mk2 => {
-          if (mk1.country.code === mk2.country.code) {
+          if (mk1.country.idx === mk2.country.idx) {
             // self
-          } else if (
-            added.some(
-              x =>
-                (x.from == mk1.country.code && x.to == mk2.country.code) ||
-                (x.from == mk2.country.code && x.to == mk1.country.code)
-            )
+          } else if (processedPairs.some(x =>
+            (x.from == mk1.country.idx && x.to == mk2.country.idx) ||
+            (x.from == mk2.country.idx && x.to == mk1.country.idx))
           ) {
-            // already added
+            // already processed
           } else {
 
             let distance = levenshtein(mk1.translation, mk2.translation);
             console.log('The distance between ' + mk1.translation + ' and ' + mk2.translation + ' is', distance);
 
-            let perc = distance / 3.0 * 100;
-            let color = funcs.getColorForPercentage(perc);
-            console.log('percentage: + ' + perc + ' leads to ' + color);
+            let maxStepsAllowed = 5;
+            if (distance <= maxStepsAllowed) {
 
-            connections.push({
-              latlngs: [mk1.country.position, mk2.country.position],
-              color: color,
-              score: distance
-            });
+              // Pretty close
+              let perc = 100 - distance / (maxStepsAllowed * 1.0) * 100;
+              let color = funcs.perc2color(perc);
+              console.log('percentage ' + perc + ' leads to ' + color);
 
-            added.push({
-              from: mk1.country.code,
-              to: mk2.country.code
-            });
+              if (perc >= 0 && perc <= 100) {
+                connections.push({
+                  latlngs: [mk1.country.position, mk2.country.position],
+                  color: color,
+                  score: distance
+                });
+              }
+
+              processedPairs.push({
+                from: mk1.country.idx,
+                to: mk2.country.idx
+              });
+            }
           }
         });
       });
@@ -253,32 +257,19 @@ const funcs = {
       resolve(result);
     });
   },
-  getColorForPercentage(pct) {
 
-    let percentColors = [
-      { pct: 0.0, color: { r: 0xff, g: 0x00, b: 0 } },
-      { pct: 0.5, color: { r: 0xff, g: 0xff, b: 0 } },
-      { pct: 1.0, color: { r: 0x00, g: 0xff, b: 0 } }
-    ];
-
-    for (var i = 1; i < percentColors.length - 1; i++) {
-      if (pct < percentColors[i].pct) {
-        break;
-      }
+  perc2color(perc) {
+    var r, g, b = 0;
+    if (perc < 50) {
+      r = 255;
+      g = Math.round(5.1 * perc);
     }
-    var lower = percentColors[i - 1];
-    var upper = percentColors[i];
-    var range = upper.pct - lower.pct;
-    var rangePct = (pct - lower.pct) / range;
-    var pctLower = 1 - rangePct;
-    var pctUpper = rangePct;
-    var color = {
-      r: Math.floor(lower.color.r * pctLower + upper.color.r * pctUpper),
-      g: Math.floor(lower.color.g * pctLower + upper.color.g * pctUpper),
-      b: Math.floor(lower.color.b * pctLower + upper.color.b * pctUpper)
-    };
-    return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
-    // or output as hex if preferred
+    else {
+      g = 255;
+      r = Math.round(510 - 5.10 * perc);
+    }
+    var h = r * 0x10000 + g * 0x100 + b * 0x1;
+    return '#' + ('000000' + h.toString(16)).slice(-6);
   }
 };
 
